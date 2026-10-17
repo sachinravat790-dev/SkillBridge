@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge AI | Career Readiness</title>
+<style>
+:root{--bg:#f5f7fc;--card:#fff;--text:#182238;--muted:#778198;--line:#e7eaf2;--primary:#5356e8;--primary2:#ededff;--green:#15976b;--orange:#d98a20;--shadow:0 12px 32px rgba(35,43,80,.06)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text)}button,input,select,textarea{font:inherit}button{cursor:pointer}.layout{display:flex;min-height:100vh}.sidebar{width:248px;background:#fff;border-right:1px solid var(--line);padding:25px 16px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:11px;padding:0 9px;font-weight:850;font-size:18px;letter-spacing:-.5px}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:white;background:linear-gradient(135deg,#5356e8,#8a64ee);font-weight:900}.brand small{display:block;font-size:9px;letter-spacing:1.4px;color:var(--muted);margin-top:3px}.nav-title{font-size:10px;font-weight:800;color:#a0a7b8;letter-spacing:1.5px;padding:0 12px;margin-bottom:8px}.nav button{display:flex;align-items:center;gap:12px;width:100%;padding:12px;border:0;border-radius:10px;background:transparent;color:#68738a;text-align:left;font-weight:650;font-size:13px;margin:3px 0}.nav button.active,.nav button:hover{background:var(--primary2);color:var(--primary)}.nav-icon{width:20px;text-align:center;font-size:17px}.side-note{margin-top:auto;padding:14px;border-radius:13px;background:#f7f7ff;border:1px solid #e7e7ff;color:var(--muted);font-size:11px;line-height:1.6}.side-note b{display:block;color:var(--text);font-size:12px;margin-bottom:5px}.main{flex:1;min-width:0}.topbar{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:4;backdrop-filter:blur(10px)}.crumb{font-size:12px;color:var(--muted)}.crumb b{color:var(--text)}.top-right{display:flex;align-items:center;gap:12px}.role-select{border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:white;color:#4b5569;font-size:12px}.avatar{height:36px;width:36px;border-radius:50%;display:grid;place-items:center;background:#e8eaff;color:#4548c8;font-size:12px;font-weight:850}.content{max-width:1350px;margin:auto;padding:30px 32px 50px}.page{display:none}.page.active{display:block}.page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:23px}.eyebrow{font-size:10px;color:var(--primary);letter-spacing:1.6px;font-weight:850;text-transform:uppercase}.page-title{font-size:29px;letter-spacing:-1px;margin:7px 0;font-weight:850}.subtitle{color:var(--muted);font-size:13px;line-height:1.7;max-width:720px}.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:750;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn-primary{background:var(--primary);color:white;box-shadow:0 6px 14px #5356e825}.btn-primary:hover{background:#4144d6}.btn-light{background:#fff;border:1px solid var(--line);color:#455066}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:18px}.stat-label{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);font-weight:700}.stat-icon{height:32px;width:32px;border-radius:10px;background:#f0f0ff;display:grid;place-items:center;font-size:16px}.stat-value{font-size:27px;font-weight:850;letter-spacing:-1px;margin:13px 0 4px}.small{font-size:10px;color:var(--muted)}.green-text{color:var(--green)}.grid-two{display:grid;grid-template-columns:1.4fr 1fr;gap:17px}.grid-equal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.card{padding:21px;margin-bottom:17px;min-width:0}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:17px}.card-title{font-size:15px;font-weight:850;letter-spacing:-.3px}.card-sub{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5}.pill{display:inline-flex;align-items:center;border-radius:30px;padding:5px 9px;font-size:10px;font-weight:800;background:#f0f2f6;color:#5b6578;white-space:nowrap}.pill.blue{background:#ededff;color:var(--primary)}.pill.green{background:#e7f8f0;color:var(--green)}.pill.orange{background:#fff4df;color:#aa6a0b}.skill-row{display:grid;grid-template-columns:90px 1fr 40px;align-items:center;gap:11px;margin:18px 0;font-size:11px}.skill-name{font-weight:750}.bar{height:8px;background:#edf0f5;border-radius:20px;overflow:hidden}.bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#5356e8,#a16aef)}.bar-fill.good{background:#1aa575}.bar-fill.warn{background:#e8a23d}.score{text-align:right;font-weight:850}.item{padding:14px 0;border-bottom:1px solid var(--line)}.item:last-child{border-bottom:0;padding-bottom:0}.item-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.item-title{font-size:12px;font-weight:850}.item-meta{font-size:10px;color:var(--muted);margin-top:5px}.item-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:11px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:11px 0}.chip{border:1px solid #e1e3ff;background:#f4f4ff;color:#4c4fd0;border-radius:8px;padding:6px 8px;font-size:10px;font-weight:750}.notice{padding:13px 14px;border:1px solid #e5e7ff;background:#f8f8ff;border-radius:11px;color:#59618f;font-size:11px;line-height:1.6;margin-bottom:17px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:13px}.field label{font-size:11px;font-weight:800;color:#465066}.field input,.field select,.field textarea{border:1px solid #d5dae5;border-radius:9px;background:#fff;padding:11px 12px;outline:none;color:var(--text);width:100%;font-size:12px}.field input:focus,.field select:focus,.field textarea:focus{border-color:#8183ef;box-shadow:0 0 0 3px #5356e815}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.check-row{display:flex;align-items:center;gap:9px;padding:11px 0;border-bottom:1px solid var(--line);font-size:11px}.check-row:last-child{border:0}.check-row input{accent-color:var(--primary)}.result-empty{padding:30px 10px;text-align:center;color:var(--muted);font-size:12px;line-height:1.6}.readiness{display:flex;align-items:center;gap:16px;margin:23px 0}.circle{width:105px;height:105px;border-radius:50%;background:conic-gradient(var(--primary) 0 74%,#e9ebf2 74%);display:grid;place-items:center;position:relative;flex-shrink:0}.circle:before{content:"";position:absolute;inset:9px;border-radius:50%;background:white}.circle span{position:relative;font-size:24px;font-weight:900}.readiness-copy b{font-size:13px}.readiness-copy p{font-size:11px;color:var(--muted);line-height:1.6}.toast{position:fixed;right:22px;bottom:22px;background:#182238;color:white;padding:13px 16px;border-radius:10px;font-size:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:20}.toast.show{opacity:1;transform:translateY(0)}.footer{text-align:center;color:#9ba3b3;font-size:10px;margin-top:22px}
+@media(max-width:1050px){.sidebar{width:75px;padding:22px 9px}.brand{justify-content:center;padding:0}.brand-copy,.nav-title,.nav-text,.side-note{display:none}.nav button{justify-content:center;padding:12px}.stats{grid-template-columns:repeat(2,1fr)}.content{padding:24px 20px}.topbar{padding:0 20px}}
+@media(max-width:650px){.sidebar{width:58px}.content{padding:20px 12px}.topbar{padding:0 12px;height:64px}.page-title{font-size:24px}.page-head{flex-direction:column}.grid-two,.grid-equal,.form-grid{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:13px}.stat-value{font-size:23px}.card{padding:15px}.role-select{display:none}.skill-row{grid-template-columns:75px 1fr 34px;gap:7px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">S</div><div class="brand-copy">SkillBridge AI<small>CAREER READINESS</small></div></div>
+ <nav class="nav">
+  <div class="nav-title">WORKSPACE</div>
+  <button class="active" data-page="dashboard"><span class="nav-icon">▦</span><span class="nav-text">Dashboard</span></button>
+  <button data-page="profile"><span class="nav-icon">♙</span><span class="nav-text">Student profile</span></button>
+  <button data-page="assessment"><span class="nav-icon">✓</span><span class="nav-text">Skill assessment</span></button>
+  <button data-page="matching"><span class="nav-icon">⌘</span><span class="nav-text">Job matching</span></button>
+  <button data-page="roadmap"><span class="nav-icon">▤</span><span class="nav-text">Learning roadmap</span></button>
+  <button data-page="company"><span class="nav-icon">▣</span><span class="nav-text">Company workspace</span></button>
+ </nav>
+ <div class="side-note"><b>Prototype mode</b>This is a frontend demo. Sample data is used until a backend and database are connected.</div>
+</aside>
+<main class="main">
+<header class="topbar"><div class="crumb">Workspace / <b id="crumb">Dashboard</b></div><div class="top-right"><select id="roleSwitch" class="role-select" aria-label="Dashboard role"><option value="student">Student view</option><option value="company">Company view</option></select><div class="avatar">SK</div></div></header>
+<div class="content">
+<section class="page active" id="page-dashboard">
+ <div class="page-head"><div><div class="eyebrow">Career intelligence platform</div><h1 class="page-title" id="welcome">Good morning, Sachin 👋</h1><div class="subtitle">Understand your current skills, identify the gaps, and build a clear path toward your next internship.</div></div><button class="btn btn-primary" onclick="showPage('assessment')">＋ Take assessment</button></div>
+ <div class="notice">✦ <b>Demo data:</b> The scores and job roles below are examples for the prototype, not live vacancies or actual hiring decisions.</div>
+ <div class="stats">
+  <div class="stat"><div class="stat-label">Readiness score <span class="stat-icon">◉</span></div><div class="stat-value" id="readiness">74%</div><div class="small green-text">↑ 8% from previous demo attempt</div></div>
+  <div class="stat"><div class="stat-label">Skills assessed <span class="stat-icon">✓</span></div><div class="stat-value">4</div><div class="small">Across four skill areas</div></div>
+  <div class="stat"><div class="stat-label">Role matches <span class="stat-icon">⌘</span></div><div class="stat-value" id="matchCount">3</div><div class="small">Based on sample roles</div></div>
+  <div class="stat"><div class="stat-label">Roadmap progress <span class="stat-icon">▤</span></div><div class="stat-value" id="taskCount">6/10</div><div class="small">Learning tasks completed</div></div>
+ </div>
+ <div class="grid-two">
+  <div class="card"><div class="card-head"><div><div class="card-title">Your skill snapshot</div><div class="card-sub">Sample assessment results</div></div><span class="pill blue">Demo</span></div>
+   <div class="skill-row"><div class="skill-name">C++</div><div class="bar"><div class="bar-fill good" style="width:86%"></div></div><div class="score">86%</div></div>
+   <div class="skill-row"><div class="skill-name">DSA</div><div class="bar"><div class="bar-fill warn" style="width:62%"></div></div><div class="score">62%</div></div>
+   <div class="skill-row"><div class="skill-name">SQL</div><div class="bar"><div class="bar-fill good" style="width:78%"></div></div><div class="score">78%</div></div>
+   <div class="skill-row"><div class="skill-name">Git</div><div class="bar"><div class="bar-fill warn" style="width:55%"></div></div><div class="score">55%</div></div>
+   <button class="btn btn-light" onclick="showPage('assessment')">Improve your skills →</button>
+  </div>
+  <div class="card"><div class="card-head"><div><div class="card-title">Recommended next steps</div><div class="card-sub">Focus on the highest-priority gaps</div></div><span class="pill orange">Priorities</span></div>
+   <div class="item"><div class="item-title">Practice DSA: arrays and binary search</div><div class="item-meta">30 minutes · 5 practice questions</div></div>
+   <div class="item"><div class="item-title">Complete Git fundamentals</div><div class="item-meta">20 minutes · commits, branches and push</div></div>
+   <div class="item"><div class="item-title">Add a project with evidence</div><div class="item-meta">Document what you built and the tools used</div></div>
+   <button class="btn btn-light" style="margin-top:12px" onclick="showPage('roadmap')">Open learning roadmap →</button>
+  </div>
+ </div>
+ <div class="card"><div class="card-head"><div><div class="card-title">Suggested role matches</div><div class="card-sub">Sample roles aligned with your skill profile</div></div><button class="btn btn-light" onclick="showPage('matching')">View all</button></div><div id="homeJobs"></div></div>
+</section>
+
+<section class="page" id="page-profile">
+ <div class="page-head"><div><div class="eyebrow">Professional identity</div><h1 class="page-title">Student profile</h1><div class="subtitle">Add skills and project evidence to make your profile more useful for role matching.</div></div><button class="btn btn-primary" onclick="saveProfile()">Save profile</button></div>
+ <div class="grid-two">
+  <div class="card"><div class="card-head"><div class="card-title">Basic information</div><span class="pill green">Demo profile</span></div>
+   <div class="form-grid"><div class="field"><label>Full name</label><input id="studentName" value="Sachin Kumar"></div><div class="field"><label>Target role</label><select id="targetRole"><option>Software Developer Intern</option><option>Frontend Developer Intern</option><option>Backend Developer Intern</option><option>Data Analyst Intern</option></select></div></div>
+   <div class="form-grid"><div class="field"><label>Degree</label><input id="degree" value="B.Tech Computer Science"></div><div class="field"><label>Semester</label><select id="semester"><option>Semester 3</option><option>Semester 1</option><option>Semester 2</option><option>Semester 4</option><option>Semester 5</option><option>Semester 6</option><option>Semester 7</option><option>Semester 8</option></select></div></div>
+   <div class="field"><label>GitHub URL (optional)</label><input id="github" placeholder="https://github.com/your-username"></div>
+   <div class="field"><label>Project evidence</label><textarea id="projectEvidence" rows="3" placeholder="Project name, what you built, technologies used...">DSA practice tracker — C++ problem-solving practice</textarea></div>
+  </div>
+  <div class="card"><div class="card-head"><div><div class="card-title">Your skills</div><div class="card-sub">Add or remove self-reported skills.</div></div></div>
+   <div class="field"><label>Add a skill</label><div style="display:flex;gap:8px"><input id="skillInput" placeholder="e.g. JavaScript"><button class="btn btn-light" onclick="addSkill()">Add</button></div></div>
+   <div class="chips" id="skills"><span class="chip">C++</span><span class="chip">DSA</span><span class="chip">SQL</span><span class="chip">Git</span></div>
+   <div class="notice">A listed skill is self-reported until supported by an assessment, project, or other evidence.</div>
+   <label class="check-row"><input type="checkbox" checked> Basic details completed</label><label class="check-row"><input type="checkbox" checked> Target role selected</label><label class="check-row"><input type="checkbox"> Add a project link</label><label class="check-row"><input type="checkbox"> Complete an assessment</label>
+  </div>
+ </div>
+</section>
+
+<section class="page" id="page-assessment">
+ <div class="page-head"><div><div class="eyebrow">Show what you know</div><h1 class="page-title">Skill assessment</h1><div class="subtitle">Answer four demo questions. Submit to calculate your score and see a next step.</div></div><span class="pill blue">4 questions · Demo</span></div>
+ <div class="grid-two">
+  <div class="card"><div class="card-head"><div><div class="card-title">Developer fundamentals</div><div class="card-sub">Choose one answer for every question.</div></div></div>
+   <form id="quiz">
+    <div class="field"><label>1. What is binary search time complexity on a sorted array?</label><label class="check-row"><input type="radio" name="q1" value="0"> O(n)</label><label class="check-row"><input type="radio" name="q1" value="1"> O(log n)</label><label class="check-row"><input type="radio" name="q1" value="0"> O(n²)</label></div>
+    <div class="field"><label>2. Which SQL clause filters rows before grouping?</label><label class="check-row"><input type="radio" name="q2" value="1"> WHERE</label><label class="check-row"><input type="radio" name="q2" value="0"> HAVING</label><label class="check-row"><input type="radio" name="q2" value="0"> ORDER BY</label></div>
+    <div class="field"><label>3. Which Git command creates a commit?</label><label class="check-row"><input type="radio" name="q3" value="0"> git pull</label><label class="check-row"><input type="radio" name="q3" value="1"> git commit</label><label class="check-row"><input type="radio" name="q3" value="0"> git status</label></div>
+    <div class="field"><label>4. Which C++ container stores elements contiguously?</label><label class="check-row"><input type="radio" name="q4" value="1"> vector</label><label class="check-row"><input type="radio" name="q4" value="0"> list</label><label class="check-row"><input type="radio" name="q4" value="0"> map</label></div>
+    <button class="btn btn-primary" type="submit">Submit assessment →</button>
+   </form>
+  </div>
+  <div class="card"><div class="card-title">Your result</div><div class="card-sub">Your score will appear after submission.</div><div id="quizResult" class="result-empty">Complete all four questions to view your result.</div></div>
+ </div>
+</section>
+
+<section class="page" id="page-matching">
+ <div class="page-head"><div><div class="eyebrow">Talent intelligence</div><h1 class="page-title">Job matching</h1><div class="subtitle">Compare sample job requirements with skills. Match scores are illustrative and are not hiring decisions.</div></div><button class="btn btn-primary" onclick="showPage('company')">＋ Create a role</button></div>
+ <div class="notice">No live vacancies are shown. A real version should use current job data, transparent matching rules and candidate consent.</div>
+ <div class="grid-equal" id="allJobs"></div>
+</section>
+
+<section class="page" id="page-roadmap">
+ <div class="page-head"><div><div class="eyebrow">Learn with a purpose</div><h1 class="page-title">Learning roadmap</h1><div class="subtitle">Tick off tasks as you complete them. Progress updates in this demo.</div></div><span class="pill blue" id="progressPill">6 of 10 complete</span></div>
+ <div class="grid-two"><div class="card"><div class="card-head"><div><div class="card-title">Your four-week plan</div><div class="card-sub">Sample tasks based on the example skill gaps.</div></div></div><div id="tasks"></div></div>
+ <div class="card"><div class="card-title">Why these tasks?</div><div class="card-sub">Prioritize skills that matter for your target role.</div><div class="item"><div class="item-title">Priority 1: DSA</div><div class="item-meta">Practice arrays, binary search and time complexity.</div></div><div class="item"><div class="item-title">Priority 2: Git</div><div class="item-meta">Practice repositories, commits, branches and pull requests.</div></div><div class="item"><div class="item-title">Evidence: one project</div><div class="item-meta">Document your work and add a repository link.</div></div><div class="notice" style="margin-top:14px">In a production app, recommendations should link to reviewed learning resources.</div></div></div>
+</section>
+
+<section class="page" id="page-company">
+ <div class="page-head"><div><div class="eyebrow">Employer workspace</div><h1 class="page-title">Company workspace</h1><div class="subtitle">Create a sample job role, specify required skills, and preview candidate matching.</div></div></div>
+ <div class="grid-two">
+  <div class="card"><div class="card-head"><div class="card-title">Create a role</div><span class="pill blue">Demo workflow</span></div>
+   <form id="jobForm">
+    <div class="field"><label>Company name</label><input id="company" required placeholder="e.g. Example Technologies"></div>
+    <div class="field"><label>Role title</label><input id="roleTitle" required placeholder="e.g. Software Developer Intern"></div>
+    <div class="form-grid"><div class="field"><label>Work mode</label><select id="workMode"><option>Hybrid</option><option>Remote</option><option>On-site</option></select></div><div class="field"><label>Experience</label><select id="experience"><option>Fresher / Intern</option><option>Entry level</option></select></div></div>
+    <div class="field"><label>Required skills (comma-separated)</label><input id="requiredSkills" required value="C++, DSA, SQL, Git"></div>
+    <div class="field"><label>Role description</label><textarea id="description" rows="3" placeholder="Describe the role...">Help build, test and maintain software features while learning from an engineering team.</textarea></div>
+    <button type="submit" class="btn btn-primary">Publish demo role →</button>
+   </form>
+  </div>
+  <div class="card"><div class="card-title">Candidate review preview</div><div class="card-sub">Recruiters should review evidence, not only a score.</div><div class="readiness"><div class="circle"><span>74%</span></div><div class="readiness-copy"><b>Sample candidate match</b><p>Illustrative demo result. A real recruiter should review skill evidence and use fair, transparent criteria.</p></div></div><div class="item"><div class="item-title">Assessment evidence</div><div class="item-meta">Topic scores and assessment date</div></div><div class="item"><div class="item-title">Project evidence</div><div class="item-meta">Student-provided projects or GitHub links</div></div><div class="item"><div class="item-title">Human review</div><div class="item-meta">Recruiter makes the final decision</div></div></div>
+ </div>
+ <div class="card"><div class="card-head"><div><div class="card-title">Published demo roles</div><div class="card-sub">Roles created in this browser session.</div></div></div><div id="companyJobs" class="result-empty">No custom roles yet.</div></div>
+</section>
+<div class="footer">SkillBridge AI · HTML, CSS and JavaScript prototype · Demo data only</div>
+</div>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const jobs=[
+ {company:"Northstar Labs",title:"Software Developer Intern",mode:"Hybrid",skills:["C++","DSA","SQL","Git"],match:78,level:"Internship"},
+ {company:"PixelCraft Studio",title:"Frontend Developer Intern",mode:"Remote",skills:["JavaScript","HTML/CSS","React","Git"],match:64,level:"Internship"},
+ {company:"DataSpring",title:"Data Analyst Intern",mode:"Hybrid",skills:["SQL","Excel","Python","Data Visualization"],match:59,level:"Internship"}
+];
+let skills=["C++","DSA","SQL","Git"];
+let tasks=[["Week 1","Revise arrays and time complexity",true],["Week 1","Solve 5 binary-search practice questions",true],["Week 1","Review SQL SELECT, WHERE and JOIN",true],["Week 2","Practice 5 DSA problems without hints",true],["Week 2","Learn Git commits and branches",true],["Week 2","Push a small project to GitHub",true],["Week 3","Solve one timed coding assessment",false],["Week 3","Practice SQL aggregation and joins",false],["Week 4","Improve project README and evidence",false],["Week 4","Retake assessment and compare results",false]];
+const $=id=>document.getElementById(id);
+function escapeHTML(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(msg){const el=$('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)}
+function showPage(name){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$('page-'+name).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===name));const btn=document.querySelector(`[data-page="${name}"]`);$('crumb').textContent=btn?btn.innerText.trim():name;window.scrollTo({top:0,behavior:'smooth'});if(name==='matching')renderJobs();if(name==='roadmap')renderTasks();if(name==='company')renderCompanyJobs()}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+$('roleSwitch').addEventListener('change',e=>showPage(e.target.value==='company'?'company':'dashboard'));
+function jobCard(j){return `<div class="item"><div class="item-top"><div><div class="item-title">${escapeHTML(j.title)}</div><div class="item-meta">${escapeHTML(j.company)} · ${escapeHTML(j.mode||'Hybrid')} · ${escapeHTML(j.level||'Internship')}</div></div><div class="circle" style="width:45px;height:45px;border-width:3px"><span style="font-size:11px">${j.match}%</span></div></div><div class="chips">${j.skills.map(s=>`<span class="chip">${escapeHTML(s)}</span>`).join('')}</div><div class="item-bottom"><span class="small">Sample match score</span><span class="pill ${j.match>=75?'green':j.match>=60?'orange':'blue'}">${j.match>=75?'Strong alignment':j.match>=60?'Some gaps':'Build more evidence'}</span></div></div>`}
+function renderJobs(){$('allJobs').innerHTML=jobs.map(j=>`<div class="card">${jobCard(j)}<button class="btn btn-light" onclick="toast('Review skill gaps for ${escapeHTML(j.title)}')">View skill gaps →</button></div>`).join('');$('homeJobs').innerHTML=jobs.slice(0,2).map(jobCard).join('');$('matchCount').textContent=jobs.length}
+function renderSkills(){$('skills').innerHTML=skills.map((s,i)=>`<span class="chip" style="cursor:pointer" title="Click to remove" onclick="removeSkill(${i})">${escapeHTML(s)} ×</span>`).join('')}
+function addSkill(){const input=$('skillInput'),v=input.value.trim();if(!v)return;if(skills.some(s=>s.toLowerCase()===v.toLowerCase()))return toast('Skill already added');skills.push(v);input.value='';renderSkills();toast('Skill added to demo profile')}
+function removeSkill(i){skills.splice(i,1);renderSkills()}
+function saveProfile(){const name=$('studentName').value.trim()||'Student';$('welcome').textContent=`Good morning, ${name.split(' ')[0]} 👋`;toast('Profile updated in this browser session')}
+function renderTasks(){$('tasks').innerHTML=tasks.map((t,i)=>`<label class="check-row"><input type="checkbox" ${t[2]?'checked':''} onchange="toggleTask(${i},this.checked)"><span style="min-width:50px;font-size:10px;color:#778198;font-weight:800">${t[0]}</span><span style="${t[2]?'text-decoration:line-through;color:#a0a7b8':''}">${escapeHTML(t[1])}</span></label>`).join('');const n=tasks.filter(t=>t[2]).length;$('progressPill').textContent=`${n} of ${tasks.length} complete`;$('taskCount').textContent=`${n}/${tasks.length}`}
+function toggleTask(i,v){tasks[i][2]=v;renderTasks();toast(v?'Task completed':'Task marked incomplete')}
+function renderCompanyJobs(){const custom=jobs.filter(j=>j.custom);$('companyJobs').innerHTML=custom.length?custom.map(jobCard).join(''):'<div class="result-empty">No custom roles yet. Publish a demo role using the form.</div>'}
+$('jobForm').addEventListener('submit',e=>{e.preventDefault();const required=$('requiredSkills').value.split(',').map(s=>s.trim()).filter(Boolean);if(!required.length)return toast('Add at least one skill');const j={company:$('company').value.trim(),title:$('roleTitle').value.trim(),mode:$('workMode').value,skills:required,match:Math.min(92,Math.max(35,30+required.length*13)),level:$('experience').value,custom:true};jobs.unshift(j);renderJobs();renderCompanyJobs();e.target.reset();$('requiredSkills').value='C++, DSA, SQL, Git';toast('Demo role published for this session')});
+$('quiz').addEventListener('submit',e=>{e.preventDefault();let score=0,answered=0;for(let i=1;i<=4;i++){const a=document.querySelector(`input[name="q${i}"]:checked`);if(a){answered++;score+=Number(a.value)}}if(answered<4)return toast('Please answer all four questions');const pct=Math.round(score/4*100);$('quizResult').className='';$('quizResult').innerHTML=`<div class="readiness"><div class="circle" style="background:conic-gradient(var(--primary) 0 ${pct}%,#e9ebf2 ${pct}%)"><span>${pct}%</span></div><div class="readiness-copy"><b>${score}/4 correct</b><p>${pct>=75?'Good start. Try a timed practice set next.':'Review the topics you missed and practice again.'}</p></div></div><div class="notice">This short quiz is a demo, not a validated measure of job readiness.</div><button class="btn btn-light" onclick="showPage('roadmap')">View learning roadmap →</button>`;$('readiness').textContent=pct+'%';toast('Assessment scored successfully')});
+renderJobs();renderTasks();renderCompanyJobs();renderSkills();
+</script>
+</body>
+</html>
